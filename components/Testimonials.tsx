@@ -2,21 +2,21 @@ export default function Testimonials() {
   const testimonials = [
     {
       rating: "HIGHLY RECOMMENDED",
-      text: "Highly recommended! My 6-year-old daughter finished the program in 4 months and her behavior has improved significantly. She's now more confident and emotionally regulated. The activities and worksheets were engaging too. Thank you very much for this amazing program.",
+      text: "This game is amazing! My 6-year-old daughter loves playing it, and through the game she learned how to better handle emotions and get along with friends. Getting feedback after each choice helps her understand what's right. The game is fun and she always wants to play again!",
       author: "Sarah",
-      date: "05/01/21"
+      date: "01/15/24"
     },
     {
-      rating: "I AM EXCITED",
-      text: "As a former primary school teacher, I am very impressed with Emotional Balance and how it has been structured. My daughter absolutely loves it and as a parent I am excited to see her emotional skills flourish as she takes ownership of her growth.",
+      rating: "VERY EFFECTIVE",
+      text: "As an elementary school teacher, I'm very impressed with this game's design. My students learn behavior choices through the game, and it works much better than just lecturing. The children all love it, and it really helps them understand correct behaviors.",
       author: "Michael",
-      date: "13/12/20"
+      date: "01/10/24"
     },
     {
-      rating: "AWESOME WORK",
-      text: "This is my third child using this program and it is so creative and helps with emotional and mental growth of children. My kids loved it and I love it too. I recommended this to all the friends and families I met and they are happy too. Awesome work!!!!",
+      rating: "GREAT LEARNING TOOL",
+      text: "This is the third child in our family using this game. The game is very creative and helps children grow emotionally and socially. My children all love it, and I love it too. I've recommended it to all my friends and families!",
       author: "Jennifer",
-      date: "04/12/20"
+      date: "01/05/24"
     }
   ]
 

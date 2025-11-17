@@ -5,12 +5,12 @@ export default function CTA() {
     <section className="cta">
       <div className="container">
         <div className="cta-content">
-          <h2>Get started with<br />professional support today</h2>
-          <p><strong>Includes access for up to four children per family.</strong></p>
-          <Link href="/contact" className="btn-primary btn-large">
-            Contact Us Today
+          <h2>Start the<br />Behavior Choice Game</h2>
+          <p><strong>Free to play, no registration required, start anytime!</strong></p>
+          <Link href="/game" className="btn-primary btn-large">
+            Start Game
           </Link>
-          <p className="cta-note">Already have an account? <Link href="/contact">Get in touch</Link></p>
+          <p className="cta-note">Want to learn more? <Link href="/about">View About Us</Link></p>
         </div>
       </div>
     </section>

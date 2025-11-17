@@ -7,31 +7,31 @@ export default function Hero() {
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="hero-title">
-              Professional Children&apos;s Psychology<br />
-              Counseling & Behavior Support
+              Behavior Choice Game<br />
+              Learn to Make Better Decisions
             </h1>
             <p className="hero-subtitle">
-              Empowering children and families with empathy, care, and evidence-based support. 
-              Specialized programs for children aged 2-13.
+              Help children learn correct behavior choices through fun interactive games, developing emotional management and social skills. 
+              Suitable for children aged 5-13.
             </p>
             <p className="hero-description">
-              <strong>Includes access for up to four children per family.</strong>
+              <strong>Choose different behaviors, get instant feedback, and see how many points you can score!</strong>
             </p>
             <div className="hero-cta">
-              <Link href="/contact" className="btn-primary btn-large">
-                Get Started Today
+              <Link href="/game" className="btn-primary btn-large">
+                Start Game
               </Link>
               <Link href="/about" className="btn-secondary">
                 Learn More
               </Link>
             </div>
             <p className="hero-note">
-              Already have an account? <Link href="/contact">Contact us</Link>
+              Free to play, no registration required
             </p>
           </div>
           <div className="hero-image">
             <div className="hero-placeholder">
-              <p>Professional Counseling Services</p>
+              <p>🎮 Interactive Learning Game</p>
             </div>
           </div>
         </div>

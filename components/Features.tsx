@@ -1,28 +1,28 @@
 export default function Features() {
   const features = [
     {
-      title: "Evidence-Based Approach",
-      description: "Our programs are based on proven therapeutic methods and match your child's individual needs"
+      title: "Interactive Game Learning",
+      description: "Children learn correct behaviors through fun choice games while playing"
     },
     {
-      title: "Comprehensive Assessment",
-      description: "Detailed evaluations and personalized treatment plans for your child's growth"
+      title: "Instant Feedback",
+      description: "Every choice gets immediate feedback to help children understand the consequences of their actions"
     },
     {
-      title: "Family-Centered Care",
-      description: "We involve parents and caregivers in the therapeutic process for holistic support"
+      title: "Scoring System",
+      description: "Different behavior choices have different scores, encouraging children to make better decisions"
     },
     {
-      title: "Progress Tracking",
-      description: "Regular reports and updates let you track your child's development and milestones"
+      title: "Rich Scenarios",
+      description: "Covers various situations in daily life to help children handle different circumstances"
     },
     {
-      title: "Flexible Sessions",
-      description: "Online and in-person options provide greater accessibility for families"
+      title: "Free to Play",
+      description: "No registration required, start playing anytime, easy and convenient"
     },
     {
-      title: "Experienced Team",
-      description: "Qualified psychologists and counselors dedicated to your child's wellbeing"
+      title: "Family-Friendly",
+      description: "Parents can play together with children to learn emotional management and social skills together"
     }
   ]
 
@@ -30,7 +30,7 @@ export default function Features() {
     <section className="features">
       <div className="container">
         <div className="features-header">
-          <h2>Why you and your child will love<br />Emotional Balance</h2>
+          <h2>Why children and parents love<br />this behavior choice game</h2>
         </div>
         <div className="features-grid">
           {features.map((feature, index) => (

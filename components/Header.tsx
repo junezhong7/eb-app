@@ -24,10 +24,10 @@ export default function Header() {
           </button>
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
             <Link href="/">Home</Link>
+            <Link href="/game">Game</Link>
             <Link href="/about">About</Link>
-            <Link href="/services">Services</Link>
             <Link href="/contact">Contact</Link>
-            <Link href="/contact" className="btn-nav">Get Started</Link>
+            <Link href="/game" className="btn-nav">Start Game</Link>
           </nav>
         </div>
       </div>

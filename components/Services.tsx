@@ -3,34 +3,34 @@ import Link from 'next/link'
 export default function Services() {
   const services = [
     {
-      title: "Individual Counseling",
-      ageRange: "Ages 2-13",
-      description: "One-on-one therapeutic sessions tailored to address specific emotional, behavioral, and developmental needs.",
-      icon: "👶"
+      title: "Behavior Choice Game",
+      ageRange: "Ages 5-13",
+      description: "Learn correct behavior choices through interactive games, with instant feedback and scoring for each choice.",
+      icon: "🎮"
     },
     {
-      title: "Behavior Support",
-      ageRange: "Ages 3-10",
-      description: "Structured programs that teach positive behavior strategies, emotional regulation, and social skills.",
-      icon: "🎯"
+      title: "Emotional Management",
+      ageRange: "Ages 5-13",
+      description: "Learn how to identify and manage emotions in the game, developing healthy ways to express feelings.",
+      icon: "😊"
     },
     {
-      title: "Family Therapy",
+      title: "Social Skills Development",
+      ageRange: "Ages 5-13",
+      description: "Learn how to get along with others and solve problems through different scenario choices.",
+      icon: "🤝"
+    },
+    {
+      title: "Family Interaction",
       ageRange: "All Ages",
-      description: "Family-centered sessions that strengthen relationships and improve communication within the family unit.",
+      description: "Parents can play games with children, discussing and learning correct behaviors together.",
       icon: "👨‍👩‍👧‍👦"
     },
     {
-      title: "Parenting Support",
-      ageRange: "For Parents",
-      description: "Training and guidance for parents of children with special needs, including NDIS support coordination.",
-      icon: "📚"
-    },
-    {
-      title: "School Readiness",
-      ageRange: "Ages 4-7",
-      description: "Programs designed to help children develop the social, emotional, and behavioral skills needed for school success.",
-      icon: "🎓"
+      title: "Free to Play",
+      ageRange: "Everyone",
+      description: "No registration required, start playing anytime, easily learn behavior choices.",
+      icon: "✨"
     }
   ]
 
@@ -38,7 +38,7 @@ export default function Services() {
     <section className="services">
       <div className="container">
         <div className="services-header">
-          <h2>Your comprehensive access to<br />all our professional programs</h2>
+          <h2>Learn through games<br />Develop correct behavior habits</h2>
         </div>
         <div className="services-grid">
           {services.map((service, index) => (
@@ -51,10 +51,10 @@ export default function Services() {
           ))}
         </div>
         <div className="services-cta">
-          <Link href="/contact" className="btn-primary btn-large">
-            Get Started Today
+          <Link href="/game" className="btn-primary btn-large">
+            Start Game Now
           </Link>
-          <p>Includes access for up to four children per family.</p>
+          <p>Free to play, suitable for all children and parents.</p>
         </div>
       </div>
     </section>

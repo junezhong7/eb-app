@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Emotional Balance - Children&apos;s Psychology Counseling & Behavior Support</title>
-        <meta name="description" content="Professional children's psychology counseling and behavior support services. Empowering children and families with empathy and care." />
+        <title>Emotional Balance - Behavior Choice Game | Children&apos;s Emotional Learning</title>
+        <meta name="description" content="Help children learn correct behavior choices through interactive games, developing emotional management and social skills. Free to play, suitable for ages 5-13." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
