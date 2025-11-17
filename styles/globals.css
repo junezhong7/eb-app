@@ -979,3 +979,187 @@ a {
   }
 }
 
+/* Drag Game Styles */
+.drag-game-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.drag-items-container {
+  background-color: var(--bg-white);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+}
+
+.drag-items-container h3,
+.drop-zone h3 {
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.drag-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.drag-item {
+  background-color: var(--bg-light);
+  border: 2px dashed var(--border-color);
+  border-radius: 10px;
+  padding: 1rem;
+  cursor: grab;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  user-select: none;
+}
+
+.drag-item:hover {
+  border-color: var(--primary-color);
+  background-color: #FFF5F5;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.drag-item:active {
+  cursor: grabbing;
+  opacity: 0.7;
+}
+
+.item-emoji {
+  font-size: 2rem;
+}
+
+.item-text {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.drop-zone {
+  background-color: var(--bg-white);
+  border: 3px dashed var(--secondary-color);
+  border-radius: 15px;
+  padding: 1.5rem;
+  min-height: 300px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+}
+
+.drop-zone.drag-over {
+  border-color: var(--primary-color);
+  background-color: #F0FDF4;
+}
+
+.drop-zone-placeholder {
+  text-align: center;
+  color: var(--text-light);
+  font-style: italic;
+  padding: 3rem 1rem;
+  border: 2px dashed var(--border-color);
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.dropped-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  min-height: 100px;
+}
+
+.dropped-item {
+  background-color: var(--bg-light);
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  user-select: none;
+}
+
+.dropped-item:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow);
+}
+
+.dropped-item.correct {
+  border-color: var(--success-color);
+  background-color: #F0FDF4;
+}
+
+.dropped-item.incorrect {
+  border-color: #EF4444;
+  background-color: #FEF2F2;
+}
+
+.dropped-item .item-emoji {
+  font-size: 1.5rem;
+}
+
+.dropped-item .item-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.remove-icon {
+  margin-left: auto;
+  font-size: 1.5rem;
+  color: var(--text-light);
+  font-weight: bold;
+  line-height: 1;
+}
+
+.dropped-item:hover .remove-icon {
+  color: var(--primary-color);
+}
+
+.check-button {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.score-breakdown {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: var(--bg-light);
+  border-radius: 10px;
+}
+
+.score-breakdown p {
+  margin: 0.5rem 0;
+  color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+  .drag-game-area {
+    grid-template-columns: 1fr;
+  }
+
+  .drag-items-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .drop-zone {
+    min-height: 250px;
+  }
+
+  .dropped-items {
+    min-height: 80px;
+  }
+}
+

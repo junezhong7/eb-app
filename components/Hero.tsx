@@ -19,7 +19,10 @@ export default function Hero() {
             </p>
             <div className="hero-cta">
               <Link href="/game" className="btn-primary btn-large">
-                Start Game
+                Choice Game
+              </Link>
+              <Link href="/drag-game" className="btn-primary btn-large">
+                Drag Game
               </Link>
               <Link href="/about" className="btn-secondary">
                 Learn More
