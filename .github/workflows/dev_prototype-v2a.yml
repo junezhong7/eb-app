@@ -31,7 +31,7 @@ jobs:
       - name: Create deployment package
         run: |
           # Remove dev dependencies but keep the built app
-          npm prune --production
+          # npm prune --production
           # Create zip with all necessary files including node_modules
           zip -r release.zip . -x "*.git*" "*.github*"
 
