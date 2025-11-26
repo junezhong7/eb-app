@@ -27,8 +27,8 @@ jobs:
                   subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
             - name: Log in to ACR with Azure CLI
-              run: az acr login --name novascampass
+              run: az acr login --name novascompass
             - name: Build and push Docker image
               run: |
-                  docker build -t novascampass.azurecr.io/eb-app:latest .
-                  docker push novascampass.azurecr.io/eb-app:latest
+                  docker build -t novascompass.azurecr.io/eb-app:latest .
+                  docker push novascompass.azurecr.io/eb-app:latest
