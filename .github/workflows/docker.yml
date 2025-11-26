@@ -29,7 +29,8 @@ jobs:
               uses: azure/docker-login@v1
               with:
                   login-server: novascampass.azurecr.io
-
+            - name: Log in to ACR with Azure CLI
+              run: az acr login --name novascampass
             - name: Build and push Docker image
               run: |
                   docker build -t novascampass.azurecr.io/eb-app:latest .
