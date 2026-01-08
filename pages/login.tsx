@@ -9,8 +9,9 @@ export default function Login() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Only allow login for username: nova, password: nova
-    if (username === 'nova' && password === 'nova') {
+    // Allow login for nova, nova1, nova2, nova3 (password same as username)
+    const allowedUsers = ['nova', 'nova1', 'nova2', 'nova3'];
+    if (allowedUsers.includes(username) && password === username) {
       localStorage.setItem('loggedIn', 'true');
       localStorage.setItem('username', username);
       router.push('/');
