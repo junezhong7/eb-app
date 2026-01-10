@@ -1163,3 +1163,13 @@ a {
   }
 }
 
+/* Interactive Circles for Video */
+.interactive-circle {
+  transition: transform 0.2s ease-in-out;
+  border: 2px solid #4682B4 !important; /* Steel blue border */
+}
+
+.interactive-circle:hover {
+  transform: scale(1.2);
+}
+
