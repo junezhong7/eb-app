@@ -99,21 +99,24 @@ const behaviors: Behavior[] = [
   {
     id: 4,
     scenario: "You feel very angry because things didn't go as you wanted. What would you do?",
-    options: [
+    imageOptions: [
       {
-        text: "Throw things or hit someone",
+        left: 75, top: 450, width: 70, height: 70,
         score: 0,
-        feedback: "Hurting others or breaking things is not a good way. We can express emotions in other ways."
+        feedback: "Let's step back and think this through again",
+        label: "OKay"
       },
       {
-        text: "Take deep breaths and tell an adult how you feel",
-        score: 10,
-        feedback: "Excellent! You learned to manage emotions in a healthy way. Deep breathing and expressing feelings are great methods!"
-      },
-      {
-        text: "Cry loudly",
+        left: 255, top: 270, width: 70, height: 70,
         score: 4,
-        feedback: "Crying is one way to express emotions, but telling an adult how you feel will help them help you better."
+        feedback: "Good job",
+        label: "Great"
+      },
+      {
+        left: 400, top: 100, width: 70, height: 70,
+        score: 10,
+        feedback: "Excellent!",
+        label: "Best"
       }
     ]
   },
@@ -158,6 +161,9 @@ export default function BehaviorGame() {
   const [waitingToRecord, setWaitingToRecord] = useState(false);
   const { isRecording, audioUrl: userAudioUrl, error: recordError, startRecording, stopRecording, setOnRecordingDone } = useAudioRecorder();
   const [recordingProgress, setRecordingProgress] = useState(0); // 0-10 seconds
+
+  // Video state for question 4
+  const [videoEnded, setVideoEnded] = useState(false);
 
   // Automatically upload recording when done
   useEffect(() => {
@@ -289,6 +295,7 @@ export default function BehaviorGame() {
       setSelectedOption(null);
       setSelectedImageOption(null);
       setShowFeedback(false);
+      setVideoEnded(false);
     } else {
       setGameCompleted(true);
     }
@@ -483,7 +490,7 @@ export default function BehaviorGame() {
 
         {/* Play video for question 4 */}
         {currentBehavior.id === 4 && (
-          <div style={{ marginTop: 12 }}>
+          <div style={{ marginTop: 12, position: 'relative', display: 'inline-block' }}>
             <video
               id="question4-video"
               src="https://novascompass.blob.core.windows.net/media/Novascompass_VideoDraft.mp4"
@@ -491,7 +498,36 @@ export default function BehaviorGame() {
               controls
               autoPlay
               style={{ display: 'block', margin: '0 auto 16px auto', background: '#000' }}
+              onEnded={() => setVideoEnded(true)}
             />
+            {videoEnded && currentBehavior.imageOptions && currentBehavior.imageOptions.map((opt, idx) => (
+              <div
+                key={idx}
+                className="interactive-circle"
+                style={{
+                  position: 'absolute',
+                  left: `${opt.left}px`,
+                  top: `${opt.top}px`,
+                  width: `${opt.width}px`,
+                  height: `${opt.height}px`,
+                  borderRadius: '50%',
+                  background: selectedImageOption === idx ? 'rgba(0,255,0,0.8)' : 
+                    idx === 0 ? 'rgba(0,0,255,0.6)' : 
+                    idx === 1 ? 'rgba(255,255,0,0.6)' : 
+                    'rgba(0,255,0,0.6)',
+                  cursor: showFeedback ? 'default' : 'pointer',
+                  border: '2px solid #000',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '12px',
+                  color: '#000'
+                }}
+                onClick={() => !showFeedback && handleSVGChoice(idx)}
+              >
+                {selectedImageOption === idx && opt.label}
+              </div>
+            ))}
           </div>
         )}
       </div>
